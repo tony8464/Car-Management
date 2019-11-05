@@ -19,10 +19,12 @@
         </ul>
         <hr>
         <div class="addCarForm">
-            <div class="leftSide">
+        <div class="leftSide">
+                <form name="addCarForm">
                 <div class="data">
                     <label for="make">Make</label>
                     <input type="make" id="make">
+                
                 </div>
                 <div class="data">
                     <label for="model">Model</label>
@@ -44,29 +46,31 @@
                     <label for="estSell">Estimated Sell Price</label>
                     <input type="estSell" id="estSell">
                 </div>
-            </div>
-            <div class="rightSide">
-                <div class="data">
-                    <label for="estSellDate">Estimated Sell Date</label>
-                    <input type="date" id="estSellDate">
-                </div>
-            </div>
+            </form>
         </div>
-        <hr>
-        <div class="dataEstProfit">
-            <div class="estProfit" id="estProfit">Estimated Profit:</div>
-            <div id="estimatedProfitOutput"></div>
-        </div>
-        <hr>
-        <div class="saveButtonContainer">
-            <div class="saveButton">
-                <button type="submit" class="button" id="saveButton">Save</button>
+        <div class="rightSide">
+            <div class="data">
+                <label for="estSellDate">Estimated Sell Date</label>
+                <input type="date" id="estSellDate">
             </div>
-            <!--<div class="clearButton">
+        
+        </div>
+    </div>
+    <hr>
+    <div class="dataEstProfit">
+        <div class="estProfit" id="estProfit">Estimated Profit:</div>
+        <div id="estimatedProfitOutput"></div>
+    </div>
+    <hr>
+    <div class="saveButtonContainer">
+        <div class="saveButton">
+            <button type="submit" class="button" id="saveButton" disabled="disabled">Save</button>
+        </div>
+        <!--<div class="clearButton">
                 <button type="submit" class="button" id="clearButton">Clear</button>
             </div>-->
-
-        </div>
+    </div>
+</div>
 </body>
 <script src="main.js"></script>
 
