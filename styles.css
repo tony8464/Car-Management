@@ -8,17 +8,17 @@
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
 }
-.navBar{
+nav ul{
     display: flex;
     list-style: none;
-    justify-content: flex-end;
-    margin: 2px;
+    justify-content:flex-start;
+    background-color: rgb(105, 103, 103);
 }
-.navBar li{
+nav li{
     margin-left: 17px;
     padding: 2px;
 }
-.navBar li:nth-child(2), .navBar li:hover{
+nav li:nth-child(2), .navBar li:hover{
     border: 1px solid black;
     border-radius: 4px;
     background-color: dimgrey;
@@ -26,7 +26,7 @@
 }
 .container{
     max-width: 800px;
-    background-color: aquamarine;
+    background-color: rgb(154, 224, 201);
     border-radius: 5px;
 }
 .addCarForm{
@@ -34,12 +34,10 @@
     justify-content: flex-end;
 }
 .leftSide, .rightSide{
-    width: 100%;
+    
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     justify-content: space-between;
-    min-width: 400px;
 }
 .dataEstProfit{
     display: flex;
@@ -47,6 +45,8 @@
 .data{
     margin: 2px;
     display: flex;
+    justify-content: flex-end;
+    white-space:nowrap;
 }
 .estProfit, .estimatedProfitOutput{
     font-weight: 900;
