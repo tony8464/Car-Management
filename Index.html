@@ -10,10 +10,33 @@
 </head>
 
 <body>
-    <div class="container">
-        <ul class="navBar">
-            <li><a href="index.html">Overview</li>
-            <li><a href="add-car.html">Add Car</li>
-            <li>Details</li>
-            <li>About</li>
-        </ul>
+
+    <body>
+        <div id="add-car-page">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="add-car.html">Add Car</a></li>
+                    <li><a href="#">Details</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Buy Price</th>
+                    </tr>
+                </thead>
+                <tbody id="car-table">
+                    <tr>
+                        <td>Dodge</td>
+                        <td>Intrepid</td>
+                        <td>$1,500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="./forEach.js"></script>
+    </body>
