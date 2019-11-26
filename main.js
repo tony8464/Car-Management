@@ -9,6 +9,11 @@ const saveButton = document.getElementById("saveButton")
 const estimatedProfitOutput = document.getElementById("estimatedProfitOutput");
 const form = document.forms["addCarForm"].elements;
 
+const overviewButton = document.getElementById("index-button");
+const addCarButton = document.getElementById("add-car-button");
+const overviewPage = document.getElementById("overview-page");
+const addCarPage = document.getElementById("add-car-page");
+
 /*getCarDataJSON();
 async function getCarDataJSON() {
     const response = await fetch('cars.json')
@@ -46,33 +51,39 @@ allInputs.forEach(function (input) {
     input.addEventListener("keyup", getEstProfit)
 
 })
+
+function activateAddCarPage() {
+    overviewPage.style.display = "none";
+    addCarPage.style.display = "flex";
+}
+function activateOverviewPage() {
+    overviewPage.style.display = "flex";
+    addCarPage.style.display = "none";
+}
+
+overviewButton.addEventListener("click", activateOverviewPage)
+addCarButton.addEventListener("click", activateAddCarPage)
+
+
+
 /*
 // this is how the Array.forEach method is implemented
 function forEach(array, callbackFunction) {
     for (let i = 0; i < array.length; i++) {
         callbackFunction(array[i])
     }
-}*/
-const pages = ["0123", "234"]
-//document.getElementById('add-car-page').style.display = 'none';
+
+
 function showHidePage() {
     const pages = [document.getElementById('add-car-page'), document.getElementById('overview-page')];
     for (let i = 0; i < pages.length; i++) {
         pages[i].style.display = 'none';
     }
-} \
+    pages[1].style.display = 'flex';
+}
 
 
 showHidePage();
-/*
-function showHide(d) {
-    var onediv = document.getElementById(d);
-    var divs = ['content1', 'content2', 'content3', 'content4'];
-    for (var i = 0; i < divs.length; i++) {
-        if (onediv != document.getElementById(divs[i])) {
-            document.getElementById(divs[i]).style.display = 'none';
-        }
-    }
-    onediv.style.display = 'block';
-}
+const addCar = document.getElementById("add-car-button");
+document.addEventListener
 */
