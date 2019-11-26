@@ -12,15 +12,16 @@
 <body>
 
     <body>
-        <div id="add-car-page">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Overview</a></li>
-                    <li><a href="add-car.html">Add Car</a></li>
-                    <li><a href="#">Details</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
+
+        <nav>
+            <ul class="nav-buttons">
+                <li id="index-button">Overview</li>
+                <li id="add-car-button">Add Car</li>
+                <li id="details">Details</li>
+                <li id="about">About</li>
+            </ul>
+        </nav>
+        <div id="overview-page" class="overview-page">
             <table>
                 <thead>
                     <tr>
@@ -38,5 +39,65 @@
                 </tbody>
             </table>
         </div>
-        <script src="./forEach.js"></script>
+        <div class="add-car-page" id="add-car-page">
+            <div class="container">
+                <hr>
+                <div class="addCarForm">
+                    <div class="leftSide">
+                        <form name="addCarForm">
+                            <div class="data">
+                                <label for="make">Make</label>
+                                <input type="make" id="make">
+
+                            </div>
+                            <div class="data">
+                                <label for="model">Model</label>
+                                <input type="model" id="model">
+                            </div>
+                            <div class="data">
+                                <label for="buyPrice">Buy Price</label>
+                                <input type="buyPrice" id="buyPrice">
+                            </div>
+                            <div class="data">
+                                <label for="estParts">Estimated Parts Cost</label>
+                                <input type="estParts" id="estParts">
+                            </div>
+                            <div class="data">
+                                <label for="estLabor">Estimated Labor Cost</label>
+                                <input type="estLabor" id="estLabor">
+                            </div>
+                            <div class="data">
+                                <label for="estSell">Estimated Sell Price</label>
+                                <input type="estSell" id="estSell">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="rightSide">
+                        <div class="data">
+                            <label for="estSellDate">Estimated Sell Date</label>
+                            <input type="date" id="estSellDate">
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+                <div class="dataEstProfit">
+                    <div class="estProfit" id="estProfit">Estimated Profit:</div>
+                    <div id="estimatedProfitOutput"></div>
+                </div>
+                <hr>
+                <div class="saveButtonContainer">
+                    <div class="saveButton">
+                        <button type="submit" class="button" id="saveButton" disabled="disabled">Save</button>
+                    </div>
+                    <!--<div class="clearButton">
+                    <button type="submit" class="button" id="clearButton">Clear</button>
+                </div>-->
+                </div>
+            </div>
+        </div>
     </body>
+    <script src="main.js"></script>
+    <script src="./forEach.js"></script>
+    <script src="./main2.js"></script>
+</body>
