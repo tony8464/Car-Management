@@ -1,109 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Overview</title>
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <ul class="nav-buttons">
-          <li><a href="/home">Overview</a></li>
-          <li><a href="/add-car">Add Car</a></li>
-          <li><a href="/details">Details</a></li>
-          <li><a href="/about">About</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div data-page="/home" class="u-hidden">
-      <table>
-        <thead>
-          <tr>
-            <th>Make</th>
-            <th>Model</th>
-            <th>Buy Price</th>
-          </tr>
-        </thead>
-        <tbody id="car-table">
-          <tr>
-            <td>Dodge</td>
-            <td>Intrepid</td>
-            <td>$1,500</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div data-page="/add-car" class="u-hidden">
-      <div class="container">
-        <hr />
-        <div class="addCarForm">
-          <div class="leftSide">
-            <form name="addCarForm">
-              <div class="data">
-                <label for="make">Make</label>
-                <input type="make" id="make" />
-              </div>
-              <div class="data">
-                <label for="model">Model</label>
-                <input type="model" id="model" />
-              </div>
-              <div class="data">
-                <label for="buyPrice">Buy Price</label>
-                <input type="buyPrice" id="buyPrice" />
-              </div>
-              <div class="data">
-                <label for="estParts">Estimated Parts Cost</label>
-                <input type="estParts" id="estParts" />
-              </div>
-              <div class="data">
-                <label for="estLabor">Estimated Labor Cost</label>
-                <input type="estLabor" id="estLabor" />
-              </div>
-              <div class="data">
-                <label for="estSell">Estimated Sell Price</label>
-                <input type="estSell" id="estSell" />
-              </div>
-            </form>
-          </div>
-          <div class="rightSide">
-            <div class="data">
-              <label for="estSellDate">Estimated Sell Date</label>
-              <input type="date" id="estSellDate" />
-            </div>
-          </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='./styles.css' />
+    <title>Overview</title>
+</head>
+
+<body>
+
+    <body>
+
+        <nav>
+            <ul class="nav-buttons">
+                <li id="index-button">Overview</li>
+                <li id="add-car-button">Add Car</li>
+                <li id="details">Details</li>
+                <li id="about">About</li>
+            </ul>
+        </nav>
+        <div id="overview-page" class="overview-page">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Buy Price</th>
+                    </tr>
+                </thead>
+                <tbody id="car-table">
+                    <tr>
+                        <td>Dodge</td>
+                        <td>Intrepid</td>
+                        <td>$1,500</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <hr />
-        <div class="dataEstProfit">
-          <div class="estProfit" id="estProfit">Estimated Profit:</div>
-          <div id="estimatedProfitOutput"></div>
-        </div>
-        <hr />
-        <div class="saveButtonContainer">
-          <div class="saveButton">
-            <button
-              type="submit"
-              class="button"
-              id="saveButton"
-              disabled="disabled"
-            >
-              Save
-            </button>
-          </div>
-          <!--<div class="clearButton">
+        <div class="add-car-page" id="add-car-page">
+            <div class="container">
+                <hr>
+                <div class="addCarForm">
+                    <div class="leftSide">
+                        <form name="addCarForm">
+                            <div class="data">
+                                <label for="make">Make</label>
+                                <input type="make" id="make">
+
+                            </div>
+                            <div class="data">
+                                <label for="model">Model</label>
+                                <input type="model" id="model">
+                            </div>
+                            <div class="data">
+                                <label for="buyPrice">Buy Price</label>
+                                <input type="buyPrice" id="buyPrice">
+                            </div>
+                            <div class="data">
+                                <label for="estParts">Estimated Parts Cost</label>
+                                <input type="estParts" id="estParts">
+                            </div>
+                            <div class="data">
+                                <label for="estLabor">Estimated Labor Cost</label>
+                                <input type="estLabor" id="estLabor">
+                            </div>
+                            <div class="data">
+                                <label for="estSell">Estimated Sell Price</label>
+                                <input type="estSell" id="estSell">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="rightSide">
+                        <div class="data">
+                            <label for="estSellDate">Estimated Sell Date</label>
+                            <input type="date" id="estSellDate">
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+                <div class="dataEstProfit">
+                    <div class="estProfit" id="estProfit">Estimated Profit:</div>
+                    <div id="estimatedProfitOutput"></div>
+                </div>
+                <hr>
+                <div class="saveButtonContainer">
+                    <div class="saveButton">
+                        <button type="submit" class="button" id="saveButton" disabled="disabled">Save</button>
+                    </div>
+                    <!--<div class="clearButton">
                     <button type="submit" class="button" id="clearButton">Clear</button>
                 </div>-->
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div id="not-found" class="u-hidden" style="text-align: center;">
-      <h1>Page not found!</h1>
-    </div>
+    </body>
     <script src="main.js"></script>
     <script src="./forEach.js"></script>
     <script src="./main2.js"></script>
-  </body>
-</html>
+</body>
