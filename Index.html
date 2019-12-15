@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel='stylesheet' href='./styles.css' />
-    <title>Overview</title>
+    <title>Testing</title>
 </head>
 
 <body>
@@ -17,29 +17,37 @@
             <ul class="nav-buttons">
                 <li id="index-button">Overview</li>
                 <li id="add-car-button">Add Car</li>
-                <li id="details">Details</li>
-                <li id="about">About</li>
+                <li id="details-button">Details</li>
+                <li id="about-button">About</li>
             </ul>
         </nav>
-        <div id="overview-page" class="overview-page">
+        <div id="overview-page" class="u-hidden">
+            <div class="filter-area">
+                <div>
+                    <label for="hide-sold-cars">Hide Sold Cars</label>
+                    <input type="checkbox" name="hide-sold-cars" id="hide-sold-cars">
+                </div>
+                <div>
+                    <label for="make-select">Select Make:</label>
+                    <select name="make-select" id="make-select">
+                        <option value="all">All</option>
+                    </select>
+                </div>
+            </div>
             <table>
                 <thead>
                     <tr>
                         <th>Make</th>
                         <th>Model</th>
                         <th>Buy Price</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody id="car-table">
-                    <tr>
-                        <td>Dodge</td>
-                        <td>Intrepid</td>
-                        <td>$1,500</td>
-                    </tr>
                 </tbody>
             </table>
         </div>
-        <div class="add-car-page" id="add-car-page">
+        <div class="u-hidden" id="add-car-page">
             <div class="container">
                 <hr>
                 <div class="addCarForm">
@@ -90,14 +98,15 @@
                     <div class="saveButton">
                         <button type="submit" class="button" id="saveButton" disabled="disabled">Save</button>
                     </div>
-                    <!--<div class="clearButton">
-                    <button type="submit" class="button" id="clearButton">Clear</button>
-                </div>-->
                 </div>
             </div>
         </div>
+        <div id="details-page" class="u-hidden">Details Page</div>
+        <div id="about-page" class="u-hidden">About Page</div>
     </body>
     <script src="main.js"></script>
     <script src="./forEach.js"></script>
     <script src="./main2.js"></script>
+    <script src="navigation.js"></script>
+    <script src="overview.js"></script>
 </body>

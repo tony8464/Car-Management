@@ -9,18 +9,7 @@ const saveButton = document.getElementById("saveButton")
 const estimatedProfitOutput = document.getElementById("estimatedProfitOutput");
 const form = document.forms["addCarForm"].elements;
 
-const overviewButton = document.getElementById("index-button");
-const addCarButton = document.getElementById("add-car-button");
-const overviewPage = document.getElementById("overview-page");
-const addCarPage = document.getElementById("add-car-page");
 
-/*getCarDataJSON();
-async function getCarDataJSON() {
-    const response = await fetch('cars.json')
-    const carData = await response.carData
-    document.getElementById('estimatedProfitOutput') = carData;
-
-}*/
 function checkForm() {
     let canSubmit = true;
 
@@ -49,41 +38,4 @@ allInputs.forEach(function (input) {
     input.addEventListener("keyup", checkForm)
     input.addEventListener("change", getEstProfit)
     input.addEventListener("keyup", getEstProfit)
-
 })
-
-function activateAddCarPage() {
-    overviewPage.style.display = "none";
-    addCarPage.style.display = "flex";
-}
-function activateOverviewPage() {
-    overviewPage.style.display = "flex";
-    addCarPage.style.display = "none";
-}
-
-overviewButton.addEventListener("click", activateOverviewPage)
-addCarButton.addEventListener("click", activateAddCarPage)
-
-
-
-/*
-// this is how the Array.forEach method is implemented
-function forEach(array, callbackFunction) {
-    for (let i = 0; i < array.length; i++) {
-        callbackFunction(array[i])
-    }
-
-
-function showHidePage() {
-    const pages = [document.getElementById('add-car-page'), document.getElementById('overview-page')];
-    for (let i = 0; i < pages.length; i++) {
-        pages[i].style.display = 'none';
-    }
-    pages[1].style.display = 'flex';
-}
-
-
-showHidePage();
-const addCar = document.getElementById("add-car-button");
-document.addEventListener
-*/

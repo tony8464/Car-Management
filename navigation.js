@@ -6,40 +6,49 @@ const detailsButton = document.getElementById("details-button");
 const detailsPage = document.getElementById("details-page");
 const aboutButton = document.getElementById("about-button");
 const aboutPage = document.getElementById("about-page");
+const pageTitle = document.getElementById("page-title");
 
 function deactivateAllPages() {
     overviewButton.classList.remove("active-button");
     addCarButton.classList.remove("active-button");
     detailsButton.classList.remove("active-button");
     aboutButton.classList.remove("active-button");
-    overviewPage.style.display = "none";
-    addCarPage.style.display = "none";
-    detailsPage.style.display = "none";
-    aboutPage.style.display = "none";
+    overviewPage.classList.add("u-hidden");
+    addCarPage.classList.add("u-hidden");
+    detailsPage.classList.add("u-hidden");
+    aboutPage.classList.add("u-hidden");
 }
-deactivateAllPages()
+function activatePage(pageElement, buttonElement, pageTitle, pageURL) {
+    deactivateAllPages()
+    pageElement.classList.remove('u-hidden');
+    buttonElement.classList.add('active-button');
+    document.title = 'Car Appy | ' + pageTitle;
+    history.pushState('', '', pageURL)
+}
 
-function activateAddCarPage() {
-    deactivateAllPages()
-    addCarButton.classList.add("active-button")
-    addCarPage.style.display = "flex";
+overviewButton.addEventListener("click", function () {
+    activatePage(overviewPage, overviewButton, 'Overview', 'overview-page')
+});
+addCarButton.addEventListener("click", function () {
+    activatePage(addCarPage, addCarButton, 'Add Car', 'add-car')
+});
+detailsButton.addEventListener("click", function () {
+    activatePage(detailsPage, detailsButton, 'Details', 'details')
+});
+aboutButton.addEventListener("click", function () {
+    activatePage(aboutPage, aboutButton, 'About', 'about')
+});
+
+function showInitialPage() {
+    if (location.pathname === '/overview-page' || location.pathname === '/') {
+        activatePage(overviewPage, overviewButton, 'Overview', 'overview-page')
+    } else if (location.pathname === '/add-car') {
+        activatePage(addCarPage, addCarButton, 'Add Car', 'add-car')
+    } else if (location.pathname === '/details') {
+        activatePage(detailsPage, detailsButton, 'Details', 'details')
+    } else if (location.pathname === '/about') {
+        activatePage(aboutPage, aboutButton, 'About', 'about')
+    }
 }
-function activateOverviewPage() {
-    deactivateAllPages()
-    overviewButton.classList.add("active-button");
-    overviewPage.style.display = "flex";
-}
-function activateDetailsPage() {
-    deactivateAllPages()
-    detailsButton.classList.add("active-button")
-    detailsPage.style.display = "flex"
-}
-function activateAboutPage() {
-    deactivateAllPages();
-    aboutButton.classList.add("active-button")
-    aboutPage.style.display = "flex"
-}
-overviewButton.addEventListener("click", activateOverviewPage);
-addCarButton.addEventListener("click", activateAddCarPage);
-detailsButton.addEventListener("click", activateDetailsPage);
-aboutButton.addEventListener("click", activateAboutPage);
+
+showInitialPage()
