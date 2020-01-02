@@ -27,6 +27,7 @@ function isCarFilteredOut(car) {
     }
 }
 
+
 function renderCarRow(car) {
     const shouldSkipCar = isCarFilteredOut(car)
     if (shouldSkipCar === true) {

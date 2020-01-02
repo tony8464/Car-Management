@@ -19,7 +19,11 @@
 .active-page{
     display: flex;
 }
-
+td{
+    background-color: dimgrey;
+    padding: 3px;
+    margin: 8px;
+}
 .u-hidden {
     display: none !important;
 }
