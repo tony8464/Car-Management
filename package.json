@@ -1,0 +1,23 @@
+{
+  "name": "car-appy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tony8464/Car-Management.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tony8464/Car-Management/issues"
+  },
+  "homepage": "https://github.com/tony8464/Car-Management#readme",
+  "dependencies": {
+    "http-server": "^0.12.0"
+  }
+}
