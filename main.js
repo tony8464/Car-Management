@@ -12,7 +12,6 @@ const form = document.forms["addCarForm"].elements;
 
 function checkForm() {
     let canSubmit = true;
-
     for (let i = 0; i < form.length && canSubmit; i++) {
         if (form[i].value.length == 0)
             canSubmit = false

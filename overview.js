@@ -4,12 +4,6 @@ const makeSelect = document.getElementById('make-select')
 
 let carData = []
 
-function showElement(element) {
-    element.classList.remove('u-hidden')
-}
-function hideElement(element) {
-    element.classList.add('u-hidden')
-}
 function removeAllRows() {
     const allRows = carTable.querySelectorAll('tr')
     allRows.forEach(function (trElement) {
@@ -27,7 +21,6 @@ function isCarFilteredOut(car) {
     }
 }
 
-
 function renderCarRow(car) {
     const shouldSkipCar = isCarFilteredOut(car)
     if (shouldSkipCar === true) {
@@ -35,29 +28,28 @@ function renderCarRow(car) {
     }
     const row = document.createElement('tr')
 
-    // make column
     const makeColumn = document.createElement('td')
     makeColumn.textContent = car.make
     row.appendChild(makeColumn)
 
-    // model column
     const modelColumn = document.createElement('td')
     modelColumn.textContent = car.model
     row.appendChild(modelColumn)
 
-    // buy price column
     const buyPriceColumn = document.createElement('td')
     buyPriceColumn.textContent = car.buyPrice
     row.appendChild(buyPriceColumn)
-    // status column
+
     const statusColumn = document.createElement('td')
     statusColumn.textContent = car.status
     row.appendChild(statusColumn)
 
+    const editColumn = document.createElement('td')
+    editColumn.textContent = "\u2630"
+    row.appendChild(editColumn)
 
     carTable.appendChild(row)
 }
-
 
 getCarDataJSON();
 async function getCarDataJSON() {

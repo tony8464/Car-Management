@@ -19,10 +19,16 @@
 .active-page{
     display: flex;
 }
-td{
-    background-color: dimgrey;
+tr th{
+    background-color: #7e7e7e;
+}
+#car-table tr:nth-child(even){
+    background-color: rgb(184, 182, 182);
     padding: 3px;
     margin: 8px;
+}
+#car-table tr:hover{
+    background-color: rgb(160, 158, 158);
 }
 .u-hidden {
     display: none !important;
@@ -73,8 +79,8 @@ nav li{
 
 }
 .button{
-border-radius: 4px;
-margin: 4px;
+    border-radius: 4px;
+    margin: 4px;
 }
 .nav-buttons{
     cursor: pointer;
