@@ -1,4 +1,6 @@
+import { carForm } from "./carForm.js"
 const carTable = document.querySelector("#car-table")
+const carFormNode = document.querySelector("#edit-car-form")
 const hideSoldCarsCheckbox = document.getElementById("hide-sold-cars")
 const makeSelect = document.getElementById("make-select")
 
@@ -46,6 +48,16 @@ function renderCarRow(car) {
 
   const editColumn = document.createElement("td")
   editColumn.textContent = "\u2630"
+  editColumn.addEventListener("click", function() {
+    carForm(carFormNode, car.id, async function(car) {
+      // TODO: make this UPDATE the car. not add a new one
+      const resp = await fetch("/api/car", {
+        method: "POST",
+        body: JSON.stringify(car)
+      })
+      alert("saved your car. you should be glad")
+    })
+  })
   row.appendChild(editColumn)
 
   carTable.appendChild(row)
