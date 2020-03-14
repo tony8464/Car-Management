@@ -1,0 +1,8 @@
+.filter-area {
+    padding: 10px 5px;
+    display: flex;
+}
+
+.filter-area div {
+    padding: 0 10px;
+}
