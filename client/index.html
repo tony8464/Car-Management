@@ -22,32 +22,32 @@
     <div id="all-pages">
         <div id="overview-page" class="u-hidden page" style='display: flex;'>
             <div>
-            <div class="filter-area">
-                <div>
-                    <label for="hide-sold-cars">Hide Sold Cars</label>
-                    <input type="checkbox" name="hide-sold-cars" id="hide-sold-cars">
+                <div class="filter-area">
+                    <div>
+                        <label for="hide-sold-cars">Hide Sold Cars</label>
+                        <input type="checkbox" name="hide-sold-cars" id="hide-sold-cars">
+                    </div>
+                    <div>
+                        <label for="make-select">Select Make:</label>
+                        <select name="make-select" id="make-select">
+                            <option value="all">All</option>
+                        </select>
+                    </div>
                 </div>
-                <div>
-                    <label for="make-select">Select Make:</label>
-                    <select name="make-select" id="make-select">
-                        <option value="all">All</option>
-                    </select>
-                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Make &#x2630;</th>
+                            <th>Model</th>
+                            <th>Buy Price</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="car-table">
+                    </tbody>
+                </table>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Make &#x2630;</th>
-                        <th>Model</th>
-                        <th>Buy Price</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody id="car-table">
-                </tbody>
-            </table>
-        </div>
-        <div id="edit-car-form"></div>
+            <div id="edit-car-form"></div>
         </div>
         <div id="add-car-page" class="u-hidden page"></div>
         <div id="details-page" class="u-hidden page">Details Page</div>
